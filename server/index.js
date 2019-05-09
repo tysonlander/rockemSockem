@@ -11,5 +11,5 @@ app.put('/api/combo/:id', rockem_ctrl.updateCombo) // edit an existing combo
 app.delete('/api/deleteCombo/:id', rockem_ctrl.deleteCombo)
 
 
-const PORT = 4040
+const PORT = 5555
 app.listen(PORT, () => console.log(`lets get ready to rumble on ${PORT}`))
