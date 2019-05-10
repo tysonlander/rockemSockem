@@ -31,26 +31,44 @@ class Ring extends Component {
 
 
   render(){
+    const opponentImg = this.props.opponents.filter((element) => {
+      return element.title === this.props.selectedMatch
+    })
     const mappedCombo = this.state.combos.map((element, i) => {
       return (
-        <div>
+        <div key={i}>
           <button onClick={() => this.handlePunch(element.strength)}>{element.name}</button>
         </div>
       )
     })
+
     return(
       <div>
+        <img src={opponentImg[0].photo} alt=""/>
         {this.state.health <= 0 ?  
         (<div>
           <img src="http://cappysgym.com/wordpress/wp-content/uploads/2016/03/knockout.jpg" alt="KO"/>
         </div>) : (
         <div>
-          <h1>Opponent Name</h1>
-          <h1>Health: {this.state.health}/100</h1>
-          <h1>{`${this.props.entryName}'s Moves`}</h1>
+          
+          <h1>Match</h1>
+          <h1>{`${this.props.selectedMatch} vs ${this.props.entrantName}`}</h1>
+          <h1>Their Health: {this.state.health}/100</h1>
+
+          {this.state.health < 50 ? // this is what gives alerts your winning
+          (<div>
+            <h1>You've Got Em On The Ropes</h1>
+          </div>) : (<div></div>)}
+
+
+
+          <h1>{`${this.props.entrantName}'s Moves`}</h1>
           {mappedCombo} 
         </div>  
-        )}
+        )
+        
+        
+        }
 
       
       </div>
