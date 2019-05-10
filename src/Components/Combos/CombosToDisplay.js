@@ -29,6 +29,7 @@ class CombosToDisplay extends Component {
       this.props.updateCombo(res.data)
       this.handleToggle();
     })
+    this.setState({editComboName: ''})
   }
 
   handleDeleteCombo = () => {
