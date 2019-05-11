@@ -3,11 +3,14 @@ import './App.css';
 import Combos from './Components/Combos/Combos'
 import SignUp from './Components/SignUp/SignUp'
 import Ring from './Components/Ring/Ring'
+import NavBar from './Components/NavBar'
+import HeroImage from './Components/HeroImage'
 
 class App extends Component {
   constructor(){
     super()
   this.state = {
+    heroImage: false,
     entrant: '',
     selectedMatch: '',
     matched: false,
@@ -68,13 +71,39 @@ class App extends Component {
     this.setState({
       matched: true
     })
-  } 
+  }
+  
+  handleHeroImage = () => {
+    this.setState({
+      heroImage: true
+    })
+  }
 
   render(){
     console.log(this.state.selectedMatch, this.state.matched)
     return (
       <div className="App">
-        {/* <img src="https://media.gq.com/photos/5aac26f0a980810c2d4f23d7/16:9/w_1280%2Cc_limit/rockem.gif" alt="super awesome gif"/> */}
+
+
+
+
+        <header>
+          <NavBar/>
+        </header>
+
+        {!this.state.heroImage ?
+        (
+        <div>
+          <HeroImage
+            handleHeroImage={this.handleHeroImage}
+          />
+        </div>
+        ) : (<div>
+          
+        </div>)
+
+        }
+
         {!this.state.matched ? 
         (
         <div className="entry-sign-up">
@@ -98,8 +127,13 @@ class App extends Component {
         
         
         
-        {/* <Combos/> */}
+        <Combos/>
+
+        <footer>
+          <h1>hello footer</h1>
+        </footer> 
       </div>
+      
     );
     
   }

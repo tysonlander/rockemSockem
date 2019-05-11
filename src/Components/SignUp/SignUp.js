@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Ring from '../Ring/Ring'
+// import Ring from '../Ring/Ring'
 import CompetitorDropDown from './DropDown/CompetitorDropDown'
 
 class SignUp extends Component {
