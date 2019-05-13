@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import '../SignUp.css';
 
 class CompetitorDropDown extends Component {
   constructor(props){
@@ -17,11 +18,11 @@ class CompetitorDropDown extends Component {
     const{listOpen, headerTitle} = this.state
     return(
         <div>
-          <li className="dd-list-item" 
+          <button className="signup-opponent-buttons" 
               onClick={this.handleClickMath}
               >
               {this.props.opponents.title} 
-          </li>
+          </button>
         </div>
         
     )

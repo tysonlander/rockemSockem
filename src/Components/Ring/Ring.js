@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios'
-
+import './Ring.css'
 
 class Ring extends Component {
   constructor(props){
@@ -37,40 +37,48 @@ class Ring extends Component {
     const mappedCombo = this.state.combos.map((element, i) => {
       return (
         <div key={i}>
-          <button onClick={() => this.handlePunch(element.strength)}>{element.name}</button>
+          <button className="ring-moves-button" onClick={() => this.handlePunch(element.strength)}>{element.name}</button>
         </div>
       )
     })
 
     return(
-      <div>
-        <img src={opponentImg[0].photo} alt=""/>
-        {this.state.health <= 0 ?  
-        (<div>
-          <img src="http://cappysgym.com/wordpress/wp-content/uploads/2016/03/knockout.jpg" alt="KO"/>
-        </div>) : (
-        <div>
-          
-          <h1>Match</h1>
-          <h1>{`${this.props.selectedMatch} vs ${this.props.entrantName}`}</h1>
-          <h1>Their Health: {this.state.health}/100</h1>
+      <div className="robot-background">
 
-          {this.state.health < 50 ? // this is what gives alerts your winning
+        <div className="match-container">
+          <img className="opponent-image" src={opponentImg[0].photo} alt=""/>
+          {this.state.health <= 0 ?  
           (<div>
-            <h1>You've Got Em On The Ropes</h1>
-          </div>) : (<div></div>)}
+            <img className="knockout" src="http://cappysgym.com/wordpress/wp-content/uploads/2016/03/knockout.jpg" alt="KO"/>
+          </div>) : (
+          <div className="center-elements">
+            
+            <h2 className="white-h2"><span className="red-entrant">{this.props.entrantName}</span> 
+               {` vs `}     
+              <span className="blue-entrant">{this.props.selectedMatch}</span>
+            </h2>
+            <h3 className="white-h3">Their Health: {this.state.health}/100</h3>
+
+            {this.state.health < 50 ? // this is what gives alerts your winning
+            (<div>
+              <h1 className="yellow-h1">You've Got Em On The Ropes</h1>
+            </div>) : (<div></div>)}
 
 
 
-          <h1>{`${this.props.entrantName}'s Moves`}</h1>
-          {mappedCombo} 
-        </div>  
-        )
+            <h2 className="title-three">{`${this.props.entrantName}'s Moves`}</h2>
+            <div className="mapped-combos-two-column">
+              {mappedCombo} 
+            </div>
+            
+          </div>  
+          )
+          
+          
+          }
+
         
-        
-        }
-
-      
+        </div>
       </div>
     )
   }

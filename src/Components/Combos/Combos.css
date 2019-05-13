@@ -1,0 +1,89 @@
+.boxing-academy-parent {
+  margin-top: 3rem;
+  background: #FDDD21;
+  height: 55vh;
+  display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: space-around;
+}
+
+.grey-h2 {
+  color: #3D3D3D;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.grey-h3 {
+  color: #3D3D3D;
+  text-transform: uppercase;
+  margin: .2rem;
+}
+
+.list-of-all-moves {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  max-height: 300vh;
+  display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: space-around;
+}
+
+.combo-card {
+  background: #3D3D3D;
+  width: 40vw;
+  height: 40vh;
+  margin-top: 1.5rem;
+  margin-right: .75rem;
+  margin-left: .75rem;
+
+  display: flex;
+	flex-direction: column;
+	/* flex-wrap: wrap; */
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.yellow-h2 {
+  text-transform: capitalize;
+  color: #FDDD21; 
+  margin: 0;
+}
+
+.small-red-button {
+  background-color: #D51E16; /* Green */
+  border: none;
+  color: white;
+  padding: .5rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: .3rem;
+  /* margin: .3rem; */
+  width: 15vw;
+  text-transform: uppercase;
+}
+
+.edit-input {
+  display: inline-block;
+  padding: .1rem 0px;
+  font-size: 14px;
+  border-radius: .3rem;
+  margin: .3rem;
+  width: 15vw;
+  color :#2699FB;
+}
+
+.white-h3-small-margin {
+  color: white;
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
+  
+}

@@ -46,19 +46,20 @@ class CombosToDisplay extends Component {
 
   render(){
     return(
-      <div>
-        <h1>{this.props.combo.name}</h1>
-        <h3>Strength: {this.props.combo.strength}</h3>
+      <div className="combo-card">
+        <h2 className="yellow-h2">{this.props.combo.name}</h2>
+        <h3 className="white-h3-small-margin">Strength: {this.props.combo.strength}</h3>
       
         <input
+          className="edit-input"
           onChange={(e) => this.handleNameInput(e.target.value)}
           value={this.state.editComboName}
           placeholder='Edit Combo Name Here'
         />
-        <button onClick={() => this.handleUpdateCombo(this.props.combo.id)}>Submit</button>
+        <button className="edit-input" onClick={() => this.handleUpdateCombo(this.props.combo.id)}>Submit</button>
 
-
-        <button onClick={this.handleDeleteCombo}>Retire Move</button>
+        <br/>
+        <button className="small-red-button" onClick={this.handleDeleteCombo}>Retire Move</button>
       </div>
     )
   }

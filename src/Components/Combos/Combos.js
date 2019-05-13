@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import CombosToDisplay from './CombosToDisplay'
+import './Combos.css'
 
 class Combos extends Component {
   constructor(props){
@@ -57,7 +58,7 @@ class Combos extends Component {
     })
     this.setState({name: ''})
     this.setState({strength: ''})
-  }
+  } 
 
   render(){
     const mappedCombos = this.state.combos.map((element, i) => {
@@ -72,24 +73,26 @@ class Combos extends Component {
       )
     })
     return(
-      <div>
-        <div>
-          <h1>Boxing Academy</h1>
-          <h1>Create A new Move</h1>
+      <div> 
+        <div className="boxing-academy-parent">
+          <h1 className="grey-h2">Boxing Academy</h1>
+          <h3 className="grey-h3">Create A new Move</h3>
           <input
+            className="signup-input"
             onChange={(e) => this.handleName(e.target.value)}
             value={this.state.name}
-            placeholder='Combo Name'
+            placeholder='  Combo Name'
           />
           <input
+            className="signup-input"
             onChange={(e) => this.handleStrength(e.target.value)}
             value={this.state.strength}
-            placeholder="Strength Level"        
+            placeholder="  Strength Level"        
           />
-          <button onClick={this.handleAddCombo}>Add A New Combo</button>
+          <button className="ring-moves-button" onClick={this.handleAddCombo}>Add Combo</button>
 
         </div>
-        <div>
+        <div className="list-of-all-moves">
           {mappedCombos}
         </div>
 

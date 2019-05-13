@@ -1,0 +1,87 @@
+.signup-opponent-buttons {
+  background-color: #2DBFC8; /* Green */
+  border: none;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: .3rem;
+  margin: .3rem;
+  width: 25vw;
+  text-transform: uppercase;
+}
+
+.signup-opponent-buttons:hover {
+  background-color: #D51E16;
+}
+
+.enter-the-ring-button {
+  background-color: #D51E16; /* Green */
+  border: none;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: .3rem;
+  margin: .3rem;
+  width: 25vw;
+  text-transform: uppercase;
+}
+
+.signup-input {
+  display: inline-block;
+  padding: 15px 0px;
+  font-size: 16px;
+  border-radius: .3rem;
+  margin: .3rem;
+  width: 25vw;
+  color :#2699FB;
+}
+
+.signup-container-one {
+  display: flex;
+  justify-content: center;
+}
+
+.signup-container-two {
+  height: 750px;
+  width: 40vw;
+  background: #262120;
+  margin: 3rem; 
+  
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
+
+.white-h2 {
+  font-size: 4rem;
+  margin: 0;
+  text-transform: uppercase;
+  color: #fff;
+}
+.white-h3 {
+  /* font-size: 2.2rem; */
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+}
+
+ul { 
+  padding: 0;
+}
+
+.title-three {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+  margin-top: 1rem;
+}

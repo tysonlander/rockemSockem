@@ -1,0 +1,11 @@
+.nav-menu {
+  background: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+.rockem-logo {
+  height: 80%;
+}
