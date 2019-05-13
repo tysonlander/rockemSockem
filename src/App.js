@@ -89,6 +89,7 @@ class App extends Component {
 
         <header>
           <NavBar/>
+          <title>Rock'em Sock'em</title>
         </header>
 
         {!this.state.heroImage ?
@@ -130,7 +131,6 @@ class App extends Component {
         <Combos/>
 
         <footer>
-          <h1>hello footer</h1>
         </footer> 
       </div>
       
